@@ -3244,10 +3244,17 @@ try {
         "height": "350px"
       });
 
-      var raised_amount_raw = Number(ifg_data.numbers.raised_amount.replace(/[^0-9\.]+/g,""));
-      var goal_amount_raw   = Number(ifg_data.numbers.goal_amount.replace(/[^0-9\.]+/g,""));
+      var raised_amount_raw = parseFloat(ifg_data.numbers.raised_amount.replace("$","").replace(",", ""));
+      var goal_amount_raw   = parseFloat(ifg_data.numbers.goal_amount.replace("$","").replace(",", ""));
 
       var percentage_raised = ( raised_amount_raw / goal_amount_raw) * 100;
+      
+      var remaining_amount_raw  = goal_amount_raw - raised_amount_raw;
+
+      var remaining_amount = currencyFormatted(remaining_amount_raw);
+
+      var remaining_amount_formatted = '$'+remaining_amount.replace(remaining_amount.slice(0,3), remaining_amount.slice(0,3)+',');
+
 
       // <iframe> content
       ifg_widget[0].contentWindow.document.write('\
@@ -3271,7 +3278,7 @@ try {
                   <div id="ifg-widget__progress_bar" class="ifg-widget__progress_bar"></div> \
                 </div> \
                 <div class="ifg-widget__body"> \
-                  <p>We still need to raise <span class="text-green text-big">'+ifg_data.numbers.raised_amount+'</span> by '+ifg_data.site_info.end_date+'. <br> '+ifg_data.site_info.extra_text+'</p> \
+                  <p>We still need to raise <span class="text-green text-big">'+remaining_amount_formatted+'</span> by '+ifg_data.site_info.end_date+'. <br> '+ifg_data.site_info.extra_text+'</p> \
                 </div> \
                 <div class="ifg-widget__footer"> \
                   <a href="'+ifg_data.site_info.donate_url+'" target="_blank" class="ifg-widget__action_donate">'+ifg_data.site_info.donate_text+'</a> \
@@ -3282,8 +3289,6 @@ try {
       
       setTimeout(function(){
         ifg_widget[0].contentWindow.document.getElementById('ifg-widget__progress_bar').style.width = percentage_raised+'%';
-
-        console.log('timeout')
       }, 300)
 
     }
@@ -3299,6 +3304,22 @@ try {
    */
   function _str(obj_str) {
     return JSON.stringify(obj_str);
+  }
+
+  function currencyFormatted(amount)
+  {
+      var i = parseFloat(amount);
+      if(isNaN(i)) { i = 0.00; }
+      var minus = '';
+      if(i < 0) { minus = '-'; }
+      i = Math.abs(i);
+      i = parseInt((i + .005) * 100);
+      i = i / 100;
+      s = new String(i);
+      if(s.indexOf('.') < 0) { s += ''; }
+      if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
+      s = minus + s;
+      return s;
   }
 
   /**
