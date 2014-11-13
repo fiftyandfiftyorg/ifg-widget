@@ -3252,8 +3252,9 @@ try {
       var remaining_amount_raw  = goal_amount_raw - raised_amount_raw;
 
       var remaining_amount = currencyFormatted(remaining_amount_raw);
+      var remaining_amount_substr = remaining_amount.substring(remaining_amount.length-3, remaining_amount.length);
 
-      var remaining_amount_formatted = '$'+remaining_amount.replace(remaining_amount.slice(0,3), remaining_amount.slice(0,3)+',');
+      var remaining_amount_formatted = '$'+remaining_amount.replace(remaining_amount_substr, ','+remaining_amount_substr);
 
 
       // <iframe> content
