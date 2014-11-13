@@ -1,0 +1,160 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#ifg-widget {
+  position:relative;
+  width:350px;
+  height:350px;
+  font-family: Georgia, serif;
+}
+#ifg-widget p {
+  color: #77787b;
+  margin:0;
+  font-size: 14px;
+  line-height:1.35;
+  font-style: italic;
+}
+#ifg-widget h1 {
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: normal;
+  margin:0;
+  padding:0;
+  font-size:26px;
+  color: #77787b;
+  line-height:1;
+}
+#ifg-widget .text-big { font-size:18px; }
+#ifg-widget .text-green { color: #b0c9be; }
+#ifg-widget h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  color: #b5b5b7;
+  text-transform: uppercase;
+  font-weight:400;
+  margin:0 0 2px 0;
+  padding:0;
+  font-size:12px;
+  line-height:1;
+}
+.ifg-widget__header {
+  width:100%;
+  height:82px;
+  background-repeat:no-repeat;
+  background-position:0 0;
+  background-image:url('data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAoAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTkzQjZGNDA2MUZBMTFFNEE0NTdEOEY5MzZENUIyNDMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTkzQjZGNDE2MUZBMTFFNEE0NTdEOEY5MzZENUIyNDMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFOTNCNkYzRTYxRkExMUU0QTQ1N0Q4RjkzNkQ1QjI0MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFOTNCNkYzRjYxRkExMUU0QTQ1N0Q4RjkzNkQ1QjI0MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwPFRgTExUTExgXEhQUFBQSFxcbHB4cGxckJCcnJCQ1MzMzNTs7Ozs7Ozs7OzsBDQsLDQ4NEA4OEBQODw4UFBARERAUHRQUFRQUHSUaFxcXFxolICMeHh4jICgoJSUoKDIyMDIyOzs7Ozs7Ozs7O//AABEIAFIBXgMBIgACEQEDEQH/xABzAAEBAQEBAQAAAAAAAAAAAAAAAQIDBAYBAQEBAAAAAAAAAAAAAAAAAAABBBAAAgIABQICCQQCAwAAAAAAAAERAiExQRIDUWFxkfCBobHBIjITBNHhcjNCQ1IjNBEBAQEBAQAAAAAAAAAAAAAAAAFBETH/2gAMAwEAAhEDEQA/APvCDQEZ10JIllAAhQJ0A8R8AAxgBlCAC5ASepSQIIKQPqUCBAoAkAAO5QvYAJIgpAAAAZlIAEeQxBShkCAB4gFIJ2KQqbAEjP2AoEKTQqAEAAAD3ABqCgTUpCgQSUgFIVYgCYlYIBciYAFDMpMQQAUAAT0QQFIUniBSFIAA9YgBqUEQF1HcnpBWBPEFIA8ROOI1AAaAoECkoxAhSFAEHpIKAKQgF7kxY7AO5ciFAggvsHuAhwpfmfPbjdlFIcxmeg89P/ZyfxXwCXHc4c1+WvLStbKORwsMj0Hm/KTfLwQ4e5459AXx0dfyIlcinvX9zopw66mK05FZWfI7JZppfA2FSt63U1acOHAvdUS1s3FV1ZOOyabrR0htNNRPcxf+/jnKLJeIG1XkeLtD6JYe0td6lXh44R0KYpyWtayahVcTMzhIGxa22reb0XcpztuteKtLbi5U4vLoA4bu9Jt9S+Wy7o6Z4HBJ8fPjDXL0w+ZfsdgRi33Pme5JaKCUfLfjrfcvmSbUdfWdLfS/AxwL/o4/4oDcHPktdclK1a22nTodDlyz93ihw/m76Arq5jDB+Zz4bXvRXu025ywycGo5P+S8v3M/jf0r1+9g10xhxg+pz43y3q3uSctZdH4nU4cNbOtnuam1so6vsB2Uwpz1Jd22va4ea1LpEzGbJbJ+AGKW5XxLkTUtTEfGTdLq9K3WVlJwX3F+PRzNNq3JLGI0O9Nuyu36Y+WAkVpxhh3OfDa9nbc01VuqwjKO50zOfD/s/m/gFdI8zl921OXZyQ62iLLD1M7M52Std1eKdcfMDdpiU4fXMnG26J2cuJ8znS1uN/a5HK/126ro+504/wCungp8gFrVrV2tglizK+5ZS3sTyWvrkn5P0JvJWru8JOgES5N2LTr4Q5KzDu/urjjB1bmenaDYFIO5QJI0KO4EkDUFFyIAyAca/j3XK+V8ku2DUHYADly8FuS6tvjbjVQdvgQoKYUuX1GoACCWrWyh+M/FGiAZjk0svWsfehSm1tzLs5s/YaKQ4jyfUzSjrM23S5mINADHLxvkSSe2HKcY4G0n/k5YLIGbJurScN6wTio6UVW921QvUayAAxbjdr1vu+nJR1NhIA5jDPqY4qPjptnctDpgQA8nGD0MU47UUKyhtvFdcepvQoEqmkpe56vIlk3VpOG9Yk0QDPHR0oqTuSwWmBK8Tpb5LRVudunqN6gHDF5YGeOjo7N2nc5eGpsAQyq23u04ZRBsYgYvSt67LZP2FqoqqzkkjWpADSaaeT0MKl6pKlsNFZT+hse4DNeN799nusk1hgoZopAAL7RqBBoUmJRe7J7C4gghQQAXQniABehJKAZCsARAuAAhSFyAhSFAhZkhcgHcAgFBCgTACBhqBQCAUnco8QGbIUnsAAdigQpABSAugAhYGoEA8SgRlGRCgJ8+pZAEABA6hgANRrqAUC6AAoOoBA9MAAAIABdAACIUABoRfAACoLMACFAAaEegA0XUjzAENEHkAALowAU8iencAKrIABf1I8/1AKi6k0AIRQgClR5AAg//2Q==');
+}
+.ifg-widget__content {
+  width:100%;
+  height:268px;
+  background-color: #fff;
+  padding: 15px 12px;
+}
+  .ifg-widget__stats {
+    width:100%;
+    height:70px;
+    border: 2px solid #ebebeb;    
+  }
+    .ifg-widget__stats_halves {
+      width:100%;
+    }
+    .ifg-widget__stats_half {
+      float:left;
+      width:50%;
+      height:68px;
+      text-align: center;
+      padding:12px;
+    }
+
+      .ifg-widget__stats_amount_raised {
+        border-right: 2px solid #ebebeb;
+      }
+      .ifg-widget__stats_amount_goal {
+
+      }
+
+  .ifg-widget__progress {
+    position:relative;
+    clear:both;
+    width:100%;
+    height:18px;
+    border-left: 2px solid #ebebeb;
+    border-right: 2px solid #ebebeb;
+    border-bottom: 2px solid #ebebeb;
+    background-color: #e3e3e3;
+  }
+    .ifg-widget__progress_overlay {
+      position:absolute;
+      top:0;left:0;
+      width:100%;
+      height:100%;
+      box-shadow:0 0 2px 0 rgba(129, 129, 133, 0.25) inset;
+    }
+    .ifg-widget__progress_bar {
+      position:absolute;
+      top:0;left:0;
+      height:100%;
+      background-color: #bfdace;
+      width:0%;
+      -webkit-transition: width 250ms linear;
+      -o-transition: width 250ms linear;
+      transition: width 250ms linear;
+    }
+    .ifg-widget__progress_bar:after {
+      position:absolute;
+      right:0;bottom:-12px;
+      content:'';
+      width:0;height:0;
+      border-left:7px solid transparent;
+      border-right:7px solid transparent;
+      border-bottom:7px solid #bfdace;
+      margin-right:-6px;
+    }
+
+  .ifg-widget__body {
+    width:100%;
+    height:100px;
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .ifg-widget__footer {
+    width:100%;
+    height:65px;
+    text-align: center;
+    padding:;
+  }
+  .ifg-widget__footer a {
+    display:block;
+    position: relative;
+    width:100%;
+    line-height:1;
+    padding:17px;
+    height: 50px;
+    background-color: #c0dace;
+    color: #fff;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 300;
+    font-family: "Trebuchet", Trebuchet, Times, serif;
+  }
+  .ifg-widget__footer a:after {
+    content:'';
+    position:absolute;
+    bottom:0;right:0;
+    height:0;width:0;
+    border-right:14px solid white;
+    border-left:14px solid transparent;
+    border-top:14px solid transparent;
+  }
+
+
+
+
+
+
+
