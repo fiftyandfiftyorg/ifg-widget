@@ -3253,7 +3253,10 @@ try {
 
       var remaining_amount = currencyFormatted(remaining_amount_raw);
 
-      var remaining_amount_formatted = '$'+remaining_amount.replace(remaining_amount.slice(0,3), remaining_amount.slice(0,3)+',');
+      // var remaining_amount_formatted = '$'+remaining_amount.replace(remaining_amount.slice(0,3), remaining_amount.slice(0,3)+',');
+      var remaining_amount_formatted = '$'+remaining_amount_raw.toLocaleString()
+
+      console.log(remaining_amount_raw, remaining_amount.toLocaleString())
 
 
       // <iframe> content
